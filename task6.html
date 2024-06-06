@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>JavaScript Click Event Tutorial</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        
+        <button onclick="button1()">button 1</button>
+        <button onclick="button2()">button 2</button>
+        <button onclick="button3()">button 3</button>
+        <button onclick="button4()">button 4</button>
+        <button onclick="button5()">button 5</button>
+
+        
+        <script>
+            function button1(){
+                let numbers = [];
+            for (let i = 0; i <= 100; i++) {
+                numbers.push(i);
+            }
+            for (let i=0; i<=100; i++){
+                if (numbers[i]%3==0){
+                    numbers.splice(i, 1);
+                }
+            }
+            console.log(numbers);
+            }
+
+            function button2(){
+                let numbers = [];
+            for (let i = 0; i <= 100; i++) {
+                numbers.push(i);
+            }
+            for (let i = 101; i <= 150; i++) {
+                numbers.push(i);
+            }
+            console.log(numbers)
+            }
+
+            function button3(){
+                let numbers = []
+                for (let i = 0; i <= 100; i++) {
+                numbers.push(i+3);
+            }
+            console.log(numbers);
+
+            }
+            function button4(){
+                let numbers = []
+                for (let i = 0; i <= 100; i++) {
+                numbers.push(i);
+                if(i>=20 && i<=40){
+                    console.log(numbers[i]);
+                }
+            }
+
+            }
+            function button5(){
+                let numbers = []
+                for (let i = 0; i <= 100; i++) {
+                    numbers.push(i);}
+                function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    let j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+            shuffleArray(numbers);
+            console.log(numbers)
+            numbers.sort(function(a,b){return b - a})
+            console.log(numbers)
+            }
+
+        </script>
+    </body>
+</html>
